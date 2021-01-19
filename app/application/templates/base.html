@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/media_queries.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/favicon.png') }}">
+    <title>Boris Saavedra | FULL STACK DEVELOPER</title>
+</head>
+<body>
+    <section id="home-section">
+        <header id="header">
+            <div class="header-pic"></div>
+            <div class="header-profile-pic">
+                <img src="{{ url_for('static', filename='assets/Boris_pic.png') }}" alt="Boris Saavedra Developer">
+            </div>
+        </header>
+        <div class="header-deco">
+            <img class="shadow-deco-1" src="{{ url_for('static', filename='assets/Union.svg') }}" width="100%" height="10%" alt="">
+        </div>
+        <section class="wrapper-login">
+            <div class="center">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                        <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </section>
+        <!-- Start content -->
+       {% block content %}
+       {% endblock %}
+        <!-- End content -->
+        <!-- Contact me section -->
+    <section id="contact-sec">
+        <div class="contact-me" id="contact-me">
+            <div id="contact-section" class="contact-me-title">Contact me</div>
+            <div class="links">
+                <a href="mailto:borisaavedra@gmail.com" target="_blank">
+                    <img class="links-icons" src="{{ url_for('static', filename='assets/mail-boris.svg') }}" alt="">
+                </a>
+                <a href="http://github.com/borisaavedra" target="_blank">
+                    <img class="links-icons" src="{{ url_for('static', filename='assets/github-boris.svg') }}" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/borisaavedra/" target="_blank">
+                    <img class="links-icons" src="{{ url_for('static', filename='assets/linkedin-boris.svg') }}" alt="">
+                </a>
+            </div>
+        </div>
+        <footer>
+            <p>Made with 🤘🏼 from <span>&nbsp;🇻🇪</span></p>
+            <p>Design & Develop by Boris Saavedra</p>
+            <p>2021</p>
+        </footer>
+    </section>
+    <script src="{{ url_for('static', filename='scripts/modalScript.js') }}"></script>
+    </body>
+</html>

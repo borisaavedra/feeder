@@ -1,0 +1,273 @@
+@media only screen and (max-width: 1885px) {
+    .main-name {
+        font-size: 3.5em;
+    }
+    
+    .full-stack {
+        font-size: 2.5em;
+    }
+    
+    #hero-img {
+        width: 45em;
+    }
+    
+    #about-sec {
+        top: -15vh;
+    }
+}
+
+@media only screen and (max-width: 1660px) {
+
+    .main-name {
+        font-size: 2.9em;
+    }
+
+}
+@media only screen and (max-width: 1560px) {
+    .main-name {
+        font-size: 2.9em;
+    }
+
+    .full-stack {
+        font-size: 2em;
+    }
+
+    .main-title {
+        padding: 0 9em;
+    }
+
+}
+@media only screen and (max-width: 1415px) {
+    .main-name {
+        font-size: 2.5em;
+    }
+
+    .full-stack {
+        font-size: 2em;
+    }
+
+    .main-title {
+        padding: 0 7em;
+    }
+
+    #hero-img {
+        width: 40em;
+    }
+
+}
+@media only screen and (max-width: 1310px) {
+
+    .main-title {
+        padding: 0 6em;
+    }
+
+    #hero-img {
+        width: 35em;
+    }
+
+}
+
+@media only screen and (max-width: 1250px) {
+    .header-pic {
+        height: 125px;
+    }
+    
+    #hero-img { 
+        display: none; 
+    }
+    
+    .header-profile-pic > img {
+        height: 125px;
+    }
+    
+    .header-profile-pic {
+        display: flex;
+        left: calc((100% / 2) - 63px);
+    }
+    
+    .main-title {
+        margin-bottom: 5em;
+        padding: 0 12em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .main-title {
+        margin-bottom: 5em;
+        padding: 0 7em;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    body{
+        font-size: 16px;
+    }
+    
+    .header-pic {
+        height: 125px;
+    }
+
+    #hero-img { 
+        display: none; 
+    }
+    
+    .header-profile-pic > img {
+        height: 125px;
+    }
+    
+    .header-profile-pic {
+        display: flex;
+        left: calc((100% / 2) - 63px);
+    }
+
+    .shadow-deco-1 {
+        display: none;
+    }
+
+    .main-name {
+        font-size: 36px;
+    }
+
+    .main-title {
+        margin-top: 7em;
+        padding: 0 2em;
+        margin-bottom: 5em;
+    }
+
+    .section-title {
+        font-size: 26px;
+        left: calc((100% / 2) - (113px / 2))
+    }
+    .full-stack {
+        font-size: 33px;
+        margin-top: 0.3em;
+    }
+
+    .minor {
+        font-size: 1.2em;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    .about-container {
+        width: 81%;
+    }
+
+    .box {
+        transform: skewY(-5deg);
+    }
+    .icon-title-job {
+        padding-left: 1em;
+        width: 6%;
+    }
+
+    .job-text {
+        padding-left: 2em;
+    }
+
+    .about-container-body-stack {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .item-py, .item-flask, .item-git, .item-mysql, .item-mongo {
+        background-size: 100%;
+    }
+
+    .item-py {
+        background: url("../assets/icons/python-boris.svg") no-repeat;
+    } 
+    
+    .item-flask {
+        background: url("../assets/icons/flask-boris.svg") no-repeat;
+    } 
+    .item-git {
+        background: url("../assets/icons/git-boris.svg") no-repeat;
+    } 
+    
+    .item-mysql {
+        background: url("../assets/icons/mysql-boris.svg") no-repeat;
+    }
+    
+    .item-html {
+        background: url("../assets/icons/html-boris.svg") no-repeat;
+    }
+    
+    .item-css {
+        background: url("../assets/icons/css-boris.svg") no-repeat;
+    }
+    
+    .item-js {
+        background: url("../assets/icons/js-boris.svg") no-repeat;
+    }
+    
+    .item-figma {
+        background: url("../assets/icons/figma-boris.svg") no-repeat;
+    }
+    
+    .item-selenium {
+        background: url("../assets/icons/selenium-boris.svg") no-repeat;
+    }
+    
+    .item-spring {
+        background: url("../assets/icons/spring-boris.svg") no-repeat;
+    }
+    
+
+    .item-mongo {
+        width: 40%;
+        background: url("../assets/icons/mongo_boris_leap.svg") no-repeat;
+    }
+
+    .portfolio-card-grid {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        width: 100%;
+    }
+
+    .icon-card {
+        width: 30%;
+    }
+
+    .card-body {
+        font-size: 16px;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+
+    .card-badge {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .contact-me  {
+        padding: 7em;
+
+    }
+
+    .contact-me-title {
+        font-size: 26px;
+        width: 100%;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        height: 250px
+
+    }
+
+    footer {
+        padding: 6em;
+    }
+
+    footer > p {
+        width: 103%;
+    }
+
+    footer > p > span > img {
+        width: 10%;
+    }
+}

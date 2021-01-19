@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add new tag</h2>
+        <div class="modal-style">
+            <form action="{{ url_for('main.savetag') }}" method="POST">
+                <p>
+                    {{ new_tag.name.label }}<br>
+                    {{ new_tag.name(size=64) }}
+                </p>
+                <p>{{ new_tag.submit() }}</p>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<section class="wrapper-login">
+    <div class="center">
+        <a href="{{ url_for('main.logout') }}">Logout</a>  
+        <div>
+            <h1>Hello {{ current_user.name }}</h1>
+            <p><i> Load an article to share knowledge with the world</i></p>
+            <form action="{{ url_for('main.load') }}" method="POST">
+                <div class="center">
+                    <label for="title">Title</label>
+                    <input type="text" class="input-loader" id="title" name="title" required>
+                    <label for="summary">Summary</label>
+                    <textarea id="summary" class="input-loader" name="summary" rows="4" cols="50" required></textarea>
+                    <label for="url">URL</label>
+                    <input type="url" class="input-loader"id="url" name="url" required>
+                    <label for="pic_url">Image URL</label>
+                    <input type="url" class="input-loader" id="pic_url" name="pic_url" required>
+                    <div class="wrp-select">
+                            <label for="tags">Choose a tag:</label>
+                            <select multiple size="3" name="tags" id="tags" required>
+                                {% for tag in all_tags %}
+                                    <option value="{{ tag.id }}">{{ tag.name }}</option>
+                                {% endfor %}
+                            </select>
+                        <input type="button" value="Add new tag" id="btn-modal">
+                    </div>
+                    <div class="btn-wrapper-form-loader">
+                        <input type="reset" class="btn-outline mr" value="Clear">
+                        <input type="submit" class="btn-outline" value="Load">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="posts-table">
+        <a href="{{ url_for('main.feeder') }}" target="_blank" rel="noopener noreferrer">
+            <button class="CTA-btn">Go to Feeder</button>
+        </a>
+        <h1>Posts published</h1>
+        <form action="{{ url_for('main.delete') }}" method="post">
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                </tr>
+                {% for post in all_posts %}
+                <tr>
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.publish_date }}</td>
+                    <td>
+                        <button type="submit" value="{{ post.id }}" name="post_id">
+                            <img src="{{ url_for('static', filename='assets/trash-2.svg') }}" width="60%" alt="Delete Icon">
+                        </button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </form>
+    </div>
+</section>
+
+
+{% endblock %}
