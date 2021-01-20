@@ -1,0 +1,42 @@
+
+@media only screen and (max-width: 1260px) {
+    .bigger {
+        font-size: 236%;
+    }
+    
+    .center-feeder {
+        width: 50%;
+        margin-top: 95px;
+        
+    }
+
+    article {
+        flex-direction: column;
+    }
+
+    .article-img {
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 580px) {
+    .bigger {
+        font-size: 236%;
+    }
+    
+    .center-feeder {
+        width: 77%;
+        margin-top: 20%;
+
+    }
+
+    article {
+        flex-direction: column;
+    }
+
+    .article-img {
+        width: 100%;
+    }
+
+}
